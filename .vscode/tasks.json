@@ -1,0 +1,27 @@
+{
+    "tasks": [
+      {
+        // type를 shell로 설정
+        "type": "shell",
+        // custom label를 설정
+        "label": "Build ft_printf_test",
+        // make 명령어를 실행!
+        "command": "/usr/bin/make",
+        // 현재 workspace를 기준으로 re, debug_make 작업을 수행함
+        "args": ["-C", "${fileDirname}/../", "clean", "all"],
+        "options": {
+          "cwd": "${workspaceFolder}/",
+          // 환경 변수로 DEBUG: ture로 설정함
+          "env": {
+            "DEBUG": "true"
+          }
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ],
+    "version": "2.0.0"
+  }
